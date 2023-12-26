@@ -147,10 +147,10 @@ function animate() {
 }
 
 const mouse = {
-  x: undefined,
-  y: undefined,
+  x: 0,
+  y: 0,
 };
-
+const rect = canvas.getBoundingClientRect();
 canvas.addEventListener("click", (event) => {
   if (activeTile && !activeTile.isOccupied && coins >= 50) {
     coins -= 50;
@@ -169,9 +169,10 @@ canvas.addEventListener("click", (event) => {
     });
   }
 });
+
 window.addEventListener("mousemove", (event) => {
-  mouse.x = event.clientX;
-  mouse.y = event.clientY;
+  mouse.x = event.clientX - rect.left;
+  mouse.y = event.clientY - rect.top;
 
   activeTile = null;
   for (let i = 0; i < placementTiles.length; i++) {
