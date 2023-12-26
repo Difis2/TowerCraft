@@ -2,7 +2,7 @@ class Ally extends Sprite {
   constructor({ position = { x: 0, y: 0 } }) {
     super({
       position,
-      imageSrc: "./../assets/mago.png",
+      imageSrc: "assets/mago.png",
       frames: {
         max: 4,
         hold: 20,

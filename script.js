@@ -29,7 +29,7 @@ const image = new Image();
 image.onload = () => {
   animate();
 };
-image.src = "./assets/level1.png";
+image.src = "assets/level1.png";
 
 function getRandomArray() {
   const randomValue = Math.random();
@@ -134,7 +134,7 @@ function animate() {
                 x: projectile.enemy.position.x,
                 y: projectile.enemy.position.y,
               },
-              imageSrc: "./../assets/fireExplosion.png",
+              imageSrc: "assets/fireExplosion.png",
               frames: { max: 3.5, hold: 5 },
               offset: { x: 0, y: 0 },
             })
