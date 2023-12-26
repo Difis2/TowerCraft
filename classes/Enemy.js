@@ -2,7 +2,7 @@ class Enemy extends Sprite {
   constructor({ position = { x: 0, y: 0 } }, waypoints) {
     super({
       position,
-      imageSrc: "./../assets/orc.png",
+      imageSrc: "assets/orc.png",
       frames: { max: 5, hold: 20 },
     });
     this.position = position;
